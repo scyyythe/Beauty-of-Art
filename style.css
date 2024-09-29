@@ -113,12 +113,12 @@ header a:hover{
 
 /* about section */
 #about{       
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;   
-        align-items: center;  
-        flex-direction: row-reverse;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    align-items: center;  
+    flex-direction: row-reverse;
 }
 
 .about-description-art{
@@ -157,57 +157,64 @@ header a:hover{
 /* art types or art categories */
 
 .type-container{
+    margin-top: 50px;
     max-width: 1500px;
     padding: 1rem;
 }
 .type-title{
-    border:solid 1px goldenrod;
+    border: solid 1px black;
     padding: 10px;
     text-align: center;
     width: 500px;
     font-size: 1.5rem;
     margin-inline: auto;
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
 
-    h1{
-    color: goldenrod;
+    h1{ 
+        font-size: 1.5rem;
+        letter-spacing: 5px;
     }
    
 }
-
-.categories-container{
+.categories-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem; 
+    padding: 1rem; 
+    box-sizing: border-box; 
 }
 
 .categories-container img {
-    max-width: 100%;
+    width: 100%; 
+    height: 300px; 
     border-radius: 20px;
     transition: transform 1s;
-    object-fit: cover; 
-
+    object-fit: cover;
+    box-sizing: border-box; 
 }
 
 .categories-container img:hover {
     cursor: pointer;
-    transform: scale(1.05); 
-
+    transform: scale(1.05);
 }
 
-.box{
-    font-size: .8rem;
-    height: 350px;
+.box {
+    width: 100%; 
+    height: 350px; 
+    font-size: 0.8rem;
     cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
-.box span{
-    font-size: .8rem;
+.box span {
+    font-size: 0.8rem;
 }
 
 .art-name {
-    height: 0; 
-    max-width: 200px;
+    height: 0;
+    max-width: 500px;
     position: relative;
     left: 10px;
     bottom: 15px;
@@ -216,14 +223,59 @@ header a:hover{
     overflow: hidden;
     transition: 1s ease;
     border-radius: 20px;
-    padding: 2px 10px; 
-    backdrop-filter: blur(3px); 
+    padding: 2px 10px;
+    backdrop-filter: blur(3px);
     color: white;
 }
 
-.box:hover .artist-name{
+.box:hover .art-name {
     bottom: 20%;
     height: 40px;
     cursor: pointer;
- }
+}
 
+
+/* collections */
+#collections{     
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    align-items: center;  
+    
+    h1{
+        margin-bottom: 20px;
+        color: goldenrod;
+        margin-inline-start: 30px;
+    }
+}
+.collection-title{
+    margin-bottom: 20px;
+    color: goldenrod;
+}
+.image-painting{
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+.image-painting img{
+    display: block;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+
+.painting-description{
+    max-width: 600px;
+    text-align:justify;
+    line-height: 2;
+    padding: 20px;
+    font-size: clamp(15px,10vw,1rem);
+}
+
+.sculpture{
+    max-width: 600px;
+    gap: 1rem;
+    img{
+        width: 300px;
+    }
+}
