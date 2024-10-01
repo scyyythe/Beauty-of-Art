@@ -356,7 +356,7 @@ footer{
 
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
     
     header ul,li,a{
        display: none;
@@ -390,4 +390,33 @@ footer{
         text-align: center;
     }
 
+}
+
+@media(max-width:1250px){
+    .home-left-con{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .about-description-art h1{
+        text-align: center;
+    }
+
+    .type-title{
+        width: 100%;
+    }
+    .collection-title{
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .painting-description h1{
+            text-align: center;
+        
+    }
+
+    .box-reason h3{
+        text-align: center;
+    }
 }
