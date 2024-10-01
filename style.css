@@ -22,7 +22,6 @@ header{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-inline-end: 50px;
 
     h3{
         font-size: 2rem;
@@ -49,7 +48,7 @@ header a:hover{
 .container{
     max-width: 1500px;
     margin-inline: auto;
-}
+}       
 
 /* section home */
 #home{
@@ -249,9 +248,11 @@ header a:hover{
     }
 }
 .collection-title{
+    margin-left: 20px;
     color: goldenrod;
 }
 .image-painting{
+    margin-inline: 10px;
     display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 }
@@ -352,5 +353,41 @@ footer{
 .icons i:hover{
     color: gold;
     cursor: pointer;
+
+}
+
+@media(max-width:500px){
+    
+    header ul,li,a{
+       display: none;
+        padding: 0;
+    }
+    
+    .home-left-con{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .about-description-art h1{
+        text-align: center;
+    }
+
+    .type-title{
+        width: 100%;
+    }
+    .collection-title{
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .painting-description h1{
+            text-align: center;
+        
+    }
+
+    .box-reason h3{
+        text-align: center;
+    }
 
 }
