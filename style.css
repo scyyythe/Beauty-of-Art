@@ -13,8 +13,7 @@ img{
     display: block;
     max-width: 100%;
 }
-header{
-    
+header {
     z-index: 100;
     max-width: 100%;
     padding: max(1.5rem, 1rem);
@@ -23,25 +22,41 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    h3{
-        font-size: 2rem;
+    span{
+        color: gold;
     }
 }
 
-header ul,li,a{
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    text-decoration: none;
-    font-size: 1rem;
+h3 {
+    font-size: 2rem;
 }
 
-header span{
-    color: gold;
+header ul, li, a{
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+    justify-content: center;
+    margin-block: 5px;
+    
 }
-header a:hover{
+
+header a:hover {
     color: gold;
+  
 }
+
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
 
 /* main container */
 
@@ -295,6 +310,7 @@ header a:hover{
     max-width: 900px;
     text-align: center;
      margin-bottom: 1rem;
+
     h2{
         font-size: 1.5rem;
         margin-bottom: 1rem;
@@ -324,6 +340,10 @@ header a:hover{
         font-size: 13px;
         text-align: justify;
         line-height: 2;
+    }
+
+    h3{
+        font-size: 1.2rem;
     }
 }
 /* list of artist */
@@ -355,13 +375,13 @@ header a:hover{
     display: block;
     margin-block: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: perspective(500px) rotateY(10deg) rotateX(10deg);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
+    border-radius: 20px;
 }
 
 .artist img:hover {
     transform: perspective(500px) rotateY(0deg) rotateX(0deg) scale(1.1);
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, .8);
+    cursor: pointer;
 }
 
 
@@ -393,14 +413,38 @@ footer{
 
 }
 
-@media(max-width:700px){
-    
-    header ul,li,a{
-       display: none;
+
+@media (max-width: 900px) {
+    header ul {
+        display: none; 
+        flex-direction: column; 
+        gap: 1rem;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
 
+    .menu-toggle:checked ~ #nav-menu {
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: block; 
+    }
 
+    .box-reason h3{
+        font-size: 1rem;
+    
+    }
 }
+    
+
+
 
 @media(max-width:1250px){
     .home-left-con{
@@ -427,6 +471,7 @@ footer{
     }
 
     .box-reason h3{
+        font-size: 1.2rem;
         text-align: center;
     }
 }
