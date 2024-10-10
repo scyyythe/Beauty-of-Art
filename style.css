@@ -412,20 +412,15 @@ footer{
     cursor: pointer;
 
 }
-
-
-@media (max-width: 900px) {
+@media (max-width:400px) {
     header ul {
         display: none; 
         flex-direction: column; 
         gap: 1rem;
-        width: 100%;
-        background-color: #fff;
+        width: 80%;
         position: absolute;
-        top: 80px; 
-        left: 0;
-        padding: 1rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        left: 100px;
+        padding: 1rem;     
         text-align: center;
     }
 
@@ -433,6 +428,39 @@ footer{
         display: flex;
     }
     
+    .menu-icon {
+        display: block; 
+    }
+
+    .box-reason h3{
+        font-size: 1rem;
+    
+    }
+}
+
+@media (max-width: 900px) {
+    header ul {
+        display: none; 
+        flex-direction: row; 
+        gap: 1rem;
+        width: 80%;
+        position: absolute;
+        left: 100px;
+        padding: 1rem;     
+        text-align: center;
+    }
+
+    .menu-toggle:checked ~ #nav-menu {
+        display: flex;
+    }
+    
+    #nav-menu li{
+
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+    
+    }
     .menu-icon {
         display: block; 
     }
